@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/drawable/button_style.xml" value="0.117" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/drawable/round.xml" value="0.117" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/drawable/tab_background.xml" value="0.117" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/drawable/tab_selected.xml" value="0.117" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/drawable/tab_unseleted.xml" value="0.117" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/adsad.xml" value="0.22780797101449277" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/fragment_item_page.xml" value="0.176" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/fragment_splash1.xml" value="0.22780797101449277" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/item_rv.xml" value="0.22780797101449277" />
+        <entry key="..\:/Android Studio/ViewPagerWithCustomTabLayout/app/src/main/res/layout/tab_item.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
