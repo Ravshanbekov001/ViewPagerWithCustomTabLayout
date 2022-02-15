@@ -1,5 +1,6 @@
 package com.example.viewpagerwithcustomtablayout
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -61,7 +62,19 @@ class MainActivity : AppCompatActivity() {
                     " Endi ko‘z tutmoq ne ma’ni har yamondin yaxshilig'?"))
 
 
-        viewPager2Adapter = ViewPager2Adapter(list)
+        val listImage = listOf(R.drawable.splash1_1,
+            R.drawable.splash2_2,
+            R.drawable.splash3_3,
+            R.drawable.splash4_4)
+
+        viewPager2Adapter = ViewPager2Adapter(list, object : ViewPagerCallBack {
+            override fun viewPagerClickListener(position: Int) {
+                val intent = Intent(this@MainActivity, SetImage::class.java)
+                intent.putExtra("image", listImage[position])
+
+                startActivity(intent)
+            }
+        })
         binding.viewPager2.adapter = viewPager2Adapter
 
         binding.otkazibYuborish.setOnClickListener {

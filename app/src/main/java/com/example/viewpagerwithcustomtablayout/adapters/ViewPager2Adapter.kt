@@ -2,20 +2,18 @@ package com.example.viewpagerwithcustomtablayout.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
-import com.example.viewpagerwithcustomtablayout.databinding.ActivityMainBinding
 import com.example.viewpagerwithcustomtablayout.databinding.ItemRvBinding
 import com.example.viewpagerwithcustomtablayout.models.ViewPager2ItemData
 
 interface ViewPagerCallBack {
 
-    fun viewPagerClickListener()
+    fun viewPagerClickListener(position: Int)
 }
 
 class ViewPager2Adapter(
     val list: List<ViewPager2ItemData>,
-//    val viewPagerCallBack: ViewPagerCallBack,
+    val viewPagerCallBack: ViewPagerCallBack,
 ) :
     RecyclerView.Adapter<ViewPager2Adapter.VH>() {
 
@@ -25,22 +23,15 @@ class ViewPager2Adapter(
         return VH(ItemRvBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
-    val selectedItemPosition = -1
 
     override fun onBindViewHolder(holder: VH, position: Int) {
         holder.itemRv.pageItemImage.setImageResource(list[position].image)
         holder.itemRv.kattaText.text = list[position].big_text
         holder.itemRv.kichkinaText.text = list[position].small_text
 
-        if (selectedItemPosition == position) {
-
-        }
 
         holder.itemRv.pageItemImage.setOnClickListener {
-            holder.itemRv.pageItemImage.setImageResource(list[position].images[position])
-            
-            holder.itemRv.kattaText.isGone = true
-            holder.itemRv.kichkinaText.isGone = true
+            viewPagerCallBack.viewPagerClickListener(position)
         }
 
 
