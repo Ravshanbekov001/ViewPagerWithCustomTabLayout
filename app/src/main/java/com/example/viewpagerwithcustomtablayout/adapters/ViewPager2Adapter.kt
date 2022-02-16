@@ -3,7 +3,7 @@ package com.example.viewpagerwithcustomtablayout.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.viewpagerwithcustomtablayout.databinding.ItemRvBinding
+import com.example.viewpagerwithcustomtablayout.databinding.FragmentItemBinding
 import com.example.viewpagerwithcustomtablayout.models.ViewPager2ItemData
 
 interface ViewPagerCallBack {
@@ -17,10 +17,10 @@ class ViewPager2Adapter(
 ) :
     RecyclerView.Adapter<ViewPager2Adapter.VH>() {
 
-    inner class VH(var itemRv: ItemRvBinding) : RecyclerView.ViewHolder(itemRv.root) {}
+    inner class VH(var itemRv: FragmentItemBinding) : RecyclerView.ViewHolder(itemRv.root) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        return VH(ItemRvBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return VH(FragmentItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
 
@@ -33,8 +33,6 @@ class ViewPager2Adapter(
         holder.itemRv.pageItemImage.setOnClickListener {
             viewPagerCallBack.viewPagerClickListener(position)
         }
-
-
     }
 
     override fun getItemCount(): Int = list.size
